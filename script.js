@@ -32,9 +32,13 @@ const displayAverageSalary = function(employeesArray) {
     sumSalary = sumSalary + parseInt(salary_i);
   }
 
-  let avgSalary = sumSalary / employeesArray.salary.length
+  let totalEmployees = employeesArray.salary.length
+  let avgSalary = sumSalary / totalEmployees
 
-  console.log(`The average salary is ${avgSalary}`);
+  console.log(`The average employee salary between our ${totalEmployees} employee(s) is ${avgSalary.toLocaleString("en-US",{
+    style:"currency",
+    currency:"USD"
+  })}`);
 }
 
 // Select a random employee

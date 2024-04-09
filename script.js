@@ -7,18 +7,18 @@ const collectEmployees = function() {
   let continueAdding = true;
   let employeeData = {firstName:[],
     lastName:[],
-    salary:[]}
+    salary:[]};
 
   while(continueAdding){
-    firstName = prompt("Enter first name : ")
-    lastName = prompt("Enter last name : ")
-    employeeSalary = prompt("Enter salary : ")
+    firstName = prompt("Enter first name : ");
+    lastName = prompt("Enter last name : ");
+    employeeSalary = prompt("Enter salary : ");
 
-    employeeData.firstName.push(firstName)
-    employeeData.lastName.push(lastName)
-    employeeData.salary.push(employeeSalary)
+    employeeData.firstName.push(firstName);
+    employeeData.lastName.push(lastName);
+    employeeData.salary.push(employeeSalary);
 
-    continueAdding = confirm("Do you want to add another employee?")
+    continueAdding = confirm("Do you want to add another employee?");
   }
   return employeeData
 }
@@ -28,11 +28,10 @@ const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let sumSalary=0;
 
-  for (let salary_i in employees.salary){
-    
-    sumSalary = sumSalary + String.parseInt(salary_i)
+  for (let salary_i in employeesArray.salary){
+    sumSalary = sumSalary + salary_i;
   }
-  console.log(`The avergae salray is ${sumSalary}`)
+  console.log(`The avergae salray is ${sumSalary}`);
 }
 
 // Select a random employee

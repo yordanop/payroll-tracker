@@ -32,9 +32,9 @@ const displayAverageSalary = function(employeesArray) {
     sumSalary = sumSalary + parseInt(salary_i);
   }
 
-  let avgSalary = sumSalary / employeesArray.salary.length()
+  let avgSalary = sumSalary / employeesArray.salary.length
 
-  console.log(`The avergae salray is ${avgSalary}`);
+  console.log(`The average salary is ${avgSalary}`);
 }
 
 // Select a random employee

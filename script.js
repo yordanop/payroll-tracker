@@ -49,7 +49,7 @@ const getRandomEmployee = function(employeesArray) {
   let totalEmployees = employeesArray.salary.length
   let indexWinner = Math.floor(randNumber * totalEmployees)
 
-  console.log(`Congrtulation to ${employeesArray.firstName[indexWinner]} ${employeesArray.firstName[lastName]}, our random drawing winner!`)
+  console.log(`Congrtulations to ${employeesArray.firstName[indexWinner]} ${employeesArray.lastName[indexWinner]}, our random drawing winner!`)
 
 }
 

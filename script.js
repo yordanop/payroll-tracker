@@ -28,10 +28,13 @@ const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let sumSalary=0;
 
-  for (let salary_i in employeesArray.salary){
-    sumSalary = sumSalary + salary_i;
+  for (let salary_i of employeesArray.salary){
+    sumSalary = sumSalary + parseInt(salary_i);
   }
-  console.log(`The avergae salray is ${sumSalary}`);
+
+  let avgSalary = sumSalary / employeesArray.salary.length()
+
+  console.log(`The avergae salray is ${avgSalary}`);
 }
 
 // Select a random employee
@@ -104,3 +107,4 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
+

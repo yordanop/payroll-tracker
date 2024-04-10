@@ -23,7 +23,7 @@ const collectEmployees = function() {
 
     let employee = {firstName:firstName,
       lastName:lastName,
-      salary:employeeSalary};
+      salary:parseInt(employeeSalary)};
 
       employeeData.push(employee);
       // past/incorrect way comment to have it in mind (the employees where not treated as an object)
@@ -44,7 +44,7 @@ const displayAverageSalary = function(employeesArray) {
   let totalEmployees = 0;
 
   for (let emply_i of employeesArray){
-    sumSalary = sumSalary + parseInt(emply_i.salary);
+    sumSalary = sumSalary + emply_i.salary;
     totalEmployees++
   }
 

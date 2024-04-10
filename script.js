@@ -17,11 +17,15 @@ const collectEmployees = function() {
     lastName = prompt("Enter last name : ");
     employeeSalary = prompt("Enter salary : ");
     
+    if(isNaN(employeeSalary)){
+      employeeSalary = 0;
+    };
+
     let employee = {firstName:firstName,
       lastName:lastName,
-      salary:employeeSalary}
+      salary:employeeSalary};
 
-      employeeData.push(employee)
+      employeeData.push(employee);
       // past/incorrect way comment to have it in mind (the employees where not treated as an object)
     // employeeData.firstName.push(firstName);
     // employeeData.lastName.push(lastName);

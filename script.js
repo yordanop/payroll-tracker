@@ -5,18 +5,26 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   let continueAdding = true;
-  let employeeData = {firstName:[],
-    lastName:[],
-    salary:[]};
+  let employeeData = [];
+  
+  // {firstName:[],
+  //   lastName:[],
+  //   salary:[]};
 
   while(continueAdding){
+    
     firstName = prompt("Enter first name : ");
     lastName = prompt("Enter last name : ");
     employeeSalary = prompt("Enter salary : ");
+    
+    let employee = {firstName:firstName,
+      lastName:lastName,
+      salary:employeeSalary}
 
-    employeeData.firstName.push(firstName);
-    employeeData.lastName.push(lastName);
-    employeeData.salary.push(employeeSalary);
+      employeeData.push(employee)
+    // employeeData.firstName.push(firstName);
+    // employeeData.lastName.push(lastName);
+    // employeeData.salary.push(employeeSalary);
 
     continueAdding = confirm("Do you want to add another employee?");
   }
@@ -26,6 +34,7 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  return true;
   let sumSalary=0;
 
   for (let salary_i of employeesArray.salary){
@@ -46,7 +55,10 @@ const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 
   let randNumber = Math.random()
-  let totalEmployees = employeesArray.salary.length
+  let totalEmployees = ;
+
+  for (let )
+
   let indexWinner = Math.floor(randNumber * totalEmployees)
 
   console.log(`Congrtulations to ${employeesArray.firstName[indexWinner]} ${employeesArray.lastName[indexWinner]}, our random drawing winner!`)

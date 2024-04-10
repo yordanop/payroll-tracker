@@ -55,13 +55,15 @@ const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 
   let randNumber = Math.random()
-  let totalEmployees = ;
+  let totalEmployees = 0;
 
-  for (let )
+  for (let emply_i of employeesArray){
+    totalEmployees++
+  }
 
   let indexWinner = Math.floor(randNumber * totalEmployees)
 
-  console.log(`Congrtulations to ${employeesArray.firstName[indexWinner]} ${employeesArray.lastName[indexWinner]}, our random drawing winner!`)
+  console.log(`Congrtulations to ${employeesArray[indexWinner].firstName} ${employeesArray[indexWinner].lastName}, our random drawing winner!`)
 
 }
 

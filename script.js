@@ -22,6 +22,7 @@ const collectEmployees = function() {
       salary:employeeSalary}
 
       employeeData.push(employee)
+      // past/incorrect way comment to have it in mind (the employees where not treated as an object)
     // employeeData.firstName.push(firstName);
     // employeeData.lastName.push(lastName);
     // employeeData.salary.push(employeeSalary);
@@ -34,14 +35,15 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  return true;
-  let sumSalary=0;
 
-  for (let salary_i of employeesArray.salary){
-    sumSalary = sumSalary + parseInt(salary_i);
+  let sumSalary=0;
+  let totalEmployees = 0;
+
+  for (let emply_i of employeesArray){
+    sumSalary = sumSalary + parseInt(emply_i.salary);
+    totalEmployees++
   }
 
-  let totalEmployees = employeesArray.salary.length
   let avgSalary = sumSalary / totalEmployees
 
   console.log(`The average employee salary between our ${totalEmployees} employee(s) is ${avgSalary.toLocaleString("en-US",{
